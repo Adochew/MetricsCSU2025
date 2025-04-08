@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+import argparse
 import json
 
 def parse_usecase_xmi(filename):
@@ -62,15 +63,18 @@ def compute_usecase_metrics(actors, usecases, associations):
         "UCP": round(ucp, 2)
     }
 
-def main():
-    xmi_path = "user1.xml"
-    actors, usecases, associations = parse_usecase_xmi(xmi_path)
+def main(input_path="user1.xml", output_path="metrics_usecase.json"):
+    actors, usecases, associations = parse_usecase_xmi(input_path)
     metrics = compute_usecase_metrics(actors, usecases, associations)
 
     print(json.dumps(metrics, indent=2, ensure_ascii=False))
-
-    with open("metrics_usecase.json", "w", encoding="utf-8") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", default="user1.xml", help="输入XMI文件路径")
+    parser.add_argument("--output", default="metrics_usecase.json", help="输出JSON路径")
+    args = parser.parse_args()
+    
+    main(args.input, args.output)

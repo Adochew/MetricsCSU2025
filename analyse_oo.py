@@ -1,4 +1,5 @@
 import os
+import argparse
 import json
 import xml.etree.ElementTree as ET
 import ast
@@ -194,12 +195,10 @@ def compute_metrics(classes):
     return result
 
 
-# ---------- 主函数 ----------
-
-def main():
-    xmi_path = "temp2.xml"
-    source_path = "src"
-    output_json = "metrics_oo.json"
+def main(input_path="temp2.xml", output_path="metrics_oo.json"):
+    xmi_path = input_path
+    # 假设代码实现都在同级目录下的 src 文件夹中
+    source_path = os.path.join(os.path.dirname(input_path), "src")
 
     print("正在解析类图 ...")
     classes = parse_xmi(xmi_path)
@@ -211,10 +210,15 @@ def main():
     metrics = compute_metrics(classes)
 
     print("保存到 JSON 文件 ...")
-    with open(output_json, 'w', encoding='utf-8') as f:
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(metrics, f, indent=2, ensure_ascii=False)
 
-    print(f"\n 完成！共分析 {len(classes)} 个类，指标保存在 {output_json}")
+    print(f"\n 完成！共分析 {len(classes)} 个类，指标保存在 {output_path}")
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", default="temp2.xml", help="输入XMI文件路径")
+    parser.add_argument("--output", default="metrics_oo.json", help="输出JSON路径")
+    args = parser.parse_args()
+
+    main(args.input, args.output)

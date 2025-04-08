@@ -1,8 +1,10 @@
 import os
+import argparse
 import json
 from radon.complexity import cc_visit
 
 def analyze_code_file(filepath):
+    """分析单个代码文件"""
     with open(filepath, 'r', encoding='utf-8') as f:
         code = f.read()
 
@@ -38,22 +40,19 @@ def analyze_code_file(filepath):
         }
     }
 
-def analyze_folder(folder_path):
-    all_results = []
-    for root, _, files in os.walk(folder_path):
-        for file in files:
-            if file.endswith(".py"):
-                filepath = os.path.join(root, file)
-                result = analyze_code_file(filepath)
-                all_results.append(result)
-    return all_results
+def main(input_path="example.py", output_path="metrics_code.json"):
+    """分析单一代码文件"""
+    result = analyze_code_file(input_path)
 
-def main():
-    results = analyze_folder("src")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump([result], f, indent=2, ensure_ascii=False)
 
-    with open("metrics_code.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-
+    print(f"分析完成，结果保存在 {output_path}")
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", default="example.py", help="要扫描的单个源代码文件路径")
+    parser.add_argument("--output", default="metrics_code.json", help="输出结果的 JSON 文件路径")
+    args = parser.parse_args()
+
+    main(args.input, args.output)

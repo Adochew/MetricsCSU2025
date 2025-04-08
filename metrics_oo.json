@@ -6,8 +6,8 @@
       "DIT": 0,
       "NOC": 0,
       "CBO": 0,
-      "RFC": 5,
-      "LCOM": 5
+      "RFC": 0,
+      "LCOM": 0
     },
     "LK": {
       "NOA": 0,
@@ -29,8 +29,8 @@
       "DIT": 0,
       "NOC": 0,
       "CBO": 1,
-      "RFC": 2,
-      "LCOM": 1
+      "RFC": 0,
+      "LCOM": 0
     },
     "LK": {
       "NOA": 1,
@@ -52,8 +52,8 @@
       "DIT": 0,
       "NOC": 0,
       "CBO": 1,
-      "RFC": 1,
-      "LCOM": 1
+      "RFC": 0,
+      "LCOM": 0
     },
     "LK": {
       "NOA": 0,
@@ -75,8 +75,8 @@
       "DIT": 0,
       "NOC": 0,
       "CBO": 1,
-      "RFC": 2,
-      "LCOM": 1
+      "RFC": 0,
+      "LCOM": 0
     },
     "LK": {
       "NOA": 1,
@@ -98,8 +98,8 @@
       "DIT": 0,
       "NOC": 0,
       "CBO": 1,
-      "RFC": 2,
-      "LCOM": 1
+      "RFC": 0,
+      "LCOM": 0
     },
     "LK": {
       "NOA": 1,
@@ -144,8 +144,8 @@
       "DIT": 0,
       "NOC": 0,
       "CBO": 1,
-      "RFC": 1,
-      "LCOM": 1
+      "RFC": 0,
+      "LCOM": 0
     },
     "LK": {
       "NOA": 0,

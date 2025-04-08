@@ -1,16 +1,16 @@
 [
   {
-    "File": "src\\classify.py",
-    "TotalLines": 44,
-    "BlankLines": 16,
-    "CommentLines": 1,
-    "CodeLines": 27,
-    "LogicalLines": 21,
+    "File": "tmp/locustfile.py",
+    "TotalLines": 7,
+    "BlankLines": 1,
+    "CommentLines": 0,
+    "CodeLines": 6,
+    "LogicalLines": 2,
     "CyclomaticComplexity": {
-      "Total": 28,
+      "Total": 3,
       "Max": 2,
-      "Avg": 1.33,
-      "FunctionCount": 21
+      "Avg": 1.5,
+      "FunctionCount": 2
     }
   }
 ]
