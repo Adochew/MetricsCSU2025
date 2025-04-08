@@ -40,19 +40,30 @@ def analyze_code_file(filepath):
         }
     }
 
-def main(input_path="example.py", output_path="metrics_code.json"):
-    """分析单一代码文件"""
-    result = analyze_code_file(input_path)
+def main(output_path="metrics_code.json"):
+    """分析 src 文件夹下所有 Python 文件"""
+    src_dir = "src"
+    all_results = []
+
+    if not os.path.exists(src_dir):
+        print("⚠️ src 文件夹不存在！")
+        return
+
+    for root, _, files in os.walk(src_dir):
+        for file in files:
+            if file.endswith(".py"):
+                filepath = os.path.join(root, file)
+                result = analyze_code_file(filepath)
+                all_results.append(result)
 
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump([result], f, indent=2, ensure_ascii=False)
+        json.dump(all_results, f, indent=2, ensure_ascii=False)
 
-    print(f"分析完成，结果保存在 {output_path}")
+    print(f"分析完成，共分析 {len(all_results)} 个文件，结果保存在 {output_path}")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default="example.py", help="要扫描的单个源代码文件路径")
     parser.add_argument("--output", default="metrics_code.json", help="输出结果的 JSON 文件路径")
     args = parser.parse_args()
 
-    main(args.input, args.output)
+    main(args.output)

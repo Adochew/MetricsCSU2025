@@ -1,16 +1,30 @@
 [
   {
-    "File": "tmp/locustfile.py",
-    "TotalLines": 7,
-    "BlankLines": 1,
-    "CommentLines": 0,
-    "CodeLines": 6,
-    "LogicalLines": 2,
+    "File": "src\\model.py",
+    "TotalLines": 169,
+    "BlankLines": 30,
+    "CommentLines": 1,
+    "CodeLines": 138,
+    "LogicalLines": 15,
     "CyclomaticComplexity": {
-      "Total": 3,
+      "Total": 19,
       "Max": 2,
-      "Avg": 1.5,
-      "FunctionCount": 2
+      "Avg": 1.27,
+      "FunctionCount": 15
+    }
+  },
+  {
+    "File": "src\\utils.py",
+    "TotalLines": 45,
+    "BlankLines": 7,
+    "CommentLines": 2,
+    "CodeLines": 36,
+    "LogicalLines": 1,
+    "CyclomaticComplexity": {
+      "Total": 1,
+      "Max": 1,
+      "Avg": 1.0,
+      "FunctionCount": 1
     }
   }
 ]

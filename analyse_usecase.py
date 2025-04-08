@@ -37,13 +37,16 @@ def compute_usecase_metrics(actors, usecases, associations):
     actor_weight = 2
     uaw = len(actors) * actor_weight
 
-    # Technical Complexity Factor (TCF): placeholder values
-    tcf_factor = 0.6
-    tcf_value = 0.6  # Normally: TCF = 0.6 + (0.01 * sum of 13 factors)
+    # ======== 使用结构性指标估算 TCF 和 EF ========
+    # TCF = 0.6 + (0.4 * scale), scale ∈ [0, 1]
+    tcf_score = (len(usecases) / 20) + (len(associations) / 30)
+    tcf_score = min(tcf_score, 1.0)
+    tcf_value = round(0.6 + (0.4 * tcf_score), 2)
 
-    # Environmental Factor (EF): placeholder values
-    ef_factor = 0.7
-    ef_value = 0.7  # Normally: EF = 1.4 + (-0.03 * sum of 8 factors)
+    # EF = 1.4 - (0.6 * scale), scale ∈ [0, 1]
+    ef_score = (len(actors) / 10) + (len(usecases) / 20)
+    ef_score = min(ef_score, 1.0)
+    ef_value = round(1.4 - (0.6 * ef_score), 2)
 
     # Unadjusted Use Case Points (UUCP)
     uucp = uaw + uucw
@@ -62,6 +65,7 @@ def compute_usecase_metrics(actors, usecases, associations):
         "EF": ef_value,
         "UCP": round(ucp, 2)
     }
+
 
 def main(input_path="user1.xml", output_path="metrics_usecase.json"):
     actors, usecases, associations = parse_usecase_xmi(input_path)

@@ -1,10 +1,31 @@
+import sys
+
 import streamlit as st
 import subprocess
 import json
 import os
 import pandas as pd
+import shutil
+from visualization import show_visualization
 
-st.set_page_config(page_title="指标仪表盘", layout="wide")
+st.set_page_config(page_title="Metrics", layout="wide")
+
+st.markdown("""
+    <style>
+        /* 侧边栏整体右移 */
+        section[data-testid="stSidebar"] > div:first-child {
+            padding-left: 20px;
+            padding-right: 10px;
+        }
+
+        /* 给每个侧边栏控件容器增加底部间距 */
+        section[data-testid="stSidebar"] .stElementContainer {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+
 
 # 字段说明字典，根据不同模块分类
 FIELD_TOOLTIPS = {
@@ -46,6 +67,27 @@ FIELD_TOOLTIPS = {
     }
 }
 
+
+
+def prepare_src_folder(uploaded_files):
+    src_dir = "src"
+
+    # 删除并重建 src 目录
+    if os.path.exists(src_dir):
+        shutil.rmtree(src_dir)
+    os.makedirs(src_dir, exist_ok=True)
+
+    # 保存所有上传文件
+    saved_paths = []
+    for uploaded_file in uploaded_files:
+        save_path = os.path.join(src_dir, uploaded_file.name)
+        with open(save_path, "wb") as f:
+            f.write(uploaded_file.getbuffer())
+        saved_paths.append(save_path)
+
+    return saved_paths
+
+
 # 左侧模块选择
 st.sidebar.title("模块选择")
 module = st.sidebar.radio(
@@ -68,7 +110,7 @@ MODULE_CONFIG = {
     "代码指标分析": {
         "script": "analyse_code.py",
         "default_output": "metrics_code.json",
-        "file_type": ["py", "java", "cpp"]
+        "file_type": ["py"]
     }
 }
 
@@ -83,7 +125,17 @@ st.markdown(FIELD_TOOLTIPS[module]["description"])
 input_mode = st.radio("选择输入方式", ["上传并扫描", "读取已有JSON文件"])
 
 if input_mode == "上传并扫描":
-    uploaded = st.file_uploader(f"上传文件（类型：{', '.join(config['file_type'])}）", type=config["file_type"])
+    if module == "代码指标分析":
+        uploaded = st.file_uploader(f"上传文件（类型：{', '.join(config['file_type'])}）", type=config["file_type"], accept_multiple_files=True)
+        prepare_src_folder(uploaded)
+    else:
+        uploaded = st.file_uploader(f"上传文件（类型：{', '.join(config['file_type'])}）", type=config["file_type"])
+
+    if module == "类图分析":
+        code_files = st.file_uploader("上传 Python 源代码文件", type=["py"], accept_multiple_files=True)
+        if code_files:
+            prepare_src_folder(code_files)
+
     output_path = st.text_input("输出结果保存为（JSON）", value=config["default_output"])
 
     # 检查是否上传文件，如果没有上传文件则提示报错
@@ -91,17 +143,27 @@ if input_mode == "上传并扫描":
         if uploaded is None:
             st.error("请上传文件进行分析！")
         else:
-            # 保存上传文件
-            os.makedirs("tmp", exist_ok=True)
-            input_path = os.path.join("tmp", uploaded.name)
-            with open(input_path, "wb") as f:
-                f.write(uploaded.getbuffer())
 
-            # 执行分析脚本
-            result = subprocess.run(
-                ["python3", config["script"], "--input", input_path, "--output", output_path],
-                capture_output=True, text=True
-            )
+            if module == "代码指标分析":
+                # 执行分析脚本
+                result = subprocess.run(
+                    [sys.executable, config["script"], "--output", output_path],
+                    capture_output=True, text=True
+                )
+
+            else:
+                # 保存上传文件
+                os.makedirs("tmp", exist_ok=True)
+                input_path = os.path.join("tmp", uploaded.name)
+
+                with open(input_path, "wb") as f:
+                    f.write(uploaded.getbuffer())
+
+                # 执行分析脚本
+                result = subprocess.run(
+                    [sys.executable, config["script"], "--input", input_path, "--output", output_path],
+                    capture_output=True, text=True
+                )
 
             if result.returncode == 0:
                 st.success("分析成功 ✅")
@@ -123,6 +185,8 @@ if input_mode == "上传并扫描":
                 # 显示 JSON 数据
                 st.subheader("原始 JSON 数据")
                 st.json(data)
+
+                show_visualization(df, module)
 
             else:
                 st.error("分析失败 ❌")
@@ -148,6 +212,8 @@ elif input_mode == "读取已有JSON文件":
             # 显示 JSON 数据
             st.subheader("原始 JSON 数据")
             st.json(data)
+
+            show_visualization(df, module)
 
         except Exception as e:
             st.error("读取失败 ❌")

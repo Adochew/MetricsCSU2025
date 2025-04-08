@@ -197,8 +197,8 @@ def compute_metrics(classes):
 
 def main(input_path="temp2.xml", output_path="metrics_oo.json"):
     xmi_path = input_path
-    # 假设代码实现都在同级目录下的 src 文件夹中
-    source_path = os.path.join(os.path.dirname(input_path), "src")
+    # 假设代码实现都在 src 文件夹中
+    source_path = os.path.join("src")
 
     print("正在解析类图 ...")
     classes = parse_xmi(xmi_path)
