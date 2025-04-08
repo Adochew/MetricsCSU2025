@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_kkgsMBeLEd60N8ipLbB6nA" name="G8">
+  <packagedElement xmi:type="uml:Association" xmi:id="_peAoYBQiEfCndbDT9ioSJQ" name="association1" memberEnd="_peS8QBQiEfCndbDT9ioSJQ _piI6cBQiEfCndbDT9ioSJQ" navigableOwnedEnd="_piI6cBQiEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_peS8QBQiEfCndbDT9ioSJQ" name="" visibility="public" type="_pn6yUBQiEfCndbDT9ioSJQ" association="_peAoYBQiEfCndbDT9ioSJQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ph64ABQiEfCndbDT9ioSJQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ph30sBQiEfCndbDT9ioSJQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_piI6cBQiEfCndbDT9ioSJQ" name="" visibility="public" type="_pov4wBQiEfCndbDT9ioSJQ" association="_peAoYBQiEfCndbDT9ioSJQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_piUgoBQiEfCndbDT9ioSJQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_piT5kBQiEfCndbDT9ioSJQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_piYLABQiEfCndbDT9ioSJQ" name="association2" memberEnd="_picccBQiEfCndbDT9ioSJQ _pijKIBQiEfCndbDT9ioSJQ" navigableOwnedEnd="_pijKIBQiEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_picccBQiEfCndbDT9ioSJQ" name="" visibility="public" type="_ppPoABQiEfCndbDT9ioSJQ" association="_piYLABQiEfCndbDT9ioSJQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_piffwRQiEfCndbDT9ioSJQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_piffwBQiEfCndbDT9ioSJQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_pijKIBQiEfCndbDT9ioSJQ" name="" visibility="public" type="_pqgMQBQiEfCndbDT9ioSJQ" association="_piYLABQiEfCndbDT9ioSJQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pimNcBQiEfCndbDT9ioSJQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pilmYBQiEfCndbDT9ioSJQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_pip30BQiEfCndbDT9ioSJQ" name="association3" memberEnd="_piqe4BQiEfCndbDT9ioSJQ _pixMkBQiEfCndbDT9ioSJQ" navigableOwnedEnd="_pixMkBQiEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_piqe4BQiEfCndbDT9ioSJQ" name="" visibility="public" type="_pp5IQBQiEfCndbDT9ioSJQ" association="_pip30BQiEfCndbDT9ioSJQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pitiMRQiEfCndbDT9ioSJQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pitiMBQiEfCndbDT9ioSJQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_pixMkBQiEfCndbDT9ioSJQ" name="" visibility="public" type="_pq4mwBQiEfCndbDT9ioSJQ" association="_pip30BQiEfCndbDT9ioSJQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pi0P4RQiEfCndbDT9ioSJQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pi0P4BQiEfCndbDT9ioSJQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pjwrEBQiEfCndbDT9ioSJQ" name="DataClassifier">
+    <ownedOperation xmi:id="_pmufgBQiEfCndbDT9ioSJQ" name="classifyData" visibility="public" bodyCondition="_pm2bUBQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_pm2bUBQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_pm764BQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_pnLLcBQiEfCndbDT9ioSJQ" name="classifyData" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_pnWKkBQiEfCndbDT9ioSJQ" name="readData" visibility="public" bodyCondition="_pnacABQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_pnacABQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_pnacARQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_pndfUBQiEfCndbDT9ioSJQ" name="readData" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_pnetcBQiEfCndbDT9ioSJQ" name="transformData" visibility="public" bodyCondition="_pnhwwBQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_pnhwwBQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_pniX0BQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_pnkNABQiEfCndbDT9ioSJQ" name="transformData" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_pnmCMBQiEfCndbDT9ioSJQ" name="classify" visibility="public" bodyCondition="_pnpskBQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_pnpskBQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_pnpskRQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_pnsv4BQiEfCndbDT9ioSJQ" name="classify" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_pnt-ABQiEfCndbDT9ioSJQ" name="showResults" visibility="public" bodyCondition="_pnxoYBQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_pnxoYBQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_pnxoYRQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_pn0EoBQiEfCndbDT9ioSJQ" name="showResults" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pnTHQBQiEfCndbDT9ioSJQ" name="void"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pn6yUBQiEfCndbDT9ioSJQ" name="NaiveBayesClassifier">
+    <generalization xmi:id="_poCHEBQiEfCndbDT9ioSJQ" general="_pjwrEBQiEfCndbDT9ioSJQ"/>
+    <ownedAttribute xmi:id="_poNGMBQiEfCndbDT9ioSJQ" name="classifier" visibility="private" type="_poQwkBQiEfCndbDT9ioSJQ"/>
+    <ownedOperation xmi:id="_poezABQiEfCndbDT9ioSJQ" name="classify" visibility="public" bodyCondition="_poh2UBQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_poh2UBQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_poh2URQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_pojEcBQiEfCndbDT9ioSJQ" name="classify" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_pokSkBQiEfCndbDT9ioSJQ" name="NaiveBayesClassifier" visibility="public" bodyCondition="_pookABQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_pookABQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_popLEBQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_poQwkBQiEfCndbDT9ioSJQ" name="NaiveBayes"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pov4wBQiEfCndbDT9ioSJQ" name="NaiveBayes">
+    <ownedOperation xmi:id="_ppCMoBQiEfCndbDT9ioSJQ" name="handle" visibility="public" bodyCondition="_ppF3ABQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_ppF3ABQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_ppF3ARQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_ppHsMBQiEfCndbDT9ioSJQ" name="handle" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ppPoABQiEfCndbDT9ioSJQ" name="KNNClassifier">
+    <generalization xmi:id="_ppUggBQiEfCndbDT9ioSJQ" general="_pjwrEBQiEfCndbDT9ioSJQ"/>
+    <ownedAttribute xmi:id="_ppccUBQiEfCndbDT9ioSJQ" name="classifier" visibility="private" type="_ppdDYBQiEfCndbDT9ioSJQ"/>
+    <ownedOperation xmi:id="_pprF0BQiEfCndbDT9ioSJQ" name="classify" visibility="public" bodyCondition="_ppsT8BQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_ppsT8BQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_ppsT8RQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_ppuwMBQiEfCndbDT9ioSJQ" name="classify" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ppvXQBQiEfCndbDT9ioSJQ" name="KNNClassifier" visibility="public" bodyCondition="_ppxzgBQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_ppxzgBQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_ppyakBQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ppdDYBQiEfCndbDT9ioSJQ" name="KNN"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pp5IQBQiEfCndbDT9ioSJQ" name="DecisionTreeClassifier">
+    <generalization xmi:id="_pp-AwBQiEfCndbDT9ioSJQ" general="_pjwrEBQiEfCndbDT9ioSJQ"/>
+    <ownedAttribute xmi:id="_pqFVgBQiEfCndbDT9ioSJQ" name="classifier" visibility="private" type="_pqGjoBQiEfCndbDT9ioSJQ"/>
+    <ownedOperation xmi:id="_pqQ7sBQiEfCndbDT9ioSJQ" name="classify" visibility="public" bodyCondition="_pqSJ0BQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_pqSJ0BQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_pqSw4BQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_pqVNIBQiEfCndbDT9ioSJQ" name="classify" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_pqWbQBQiEfCndbDT9ioSJQ" name="DecisionTreeClassifier" visibility="public" bodyCondition="_pqZekBQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_pqZekBQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_pqaFoBQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pqGjoBQiEfCndbDT9ioSJQ" name="DecisionTree"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pqgMQBQiEfCndbDT9ioSJQ" name="Knn">
+    <ownedOperation xmi:id="_pqtnoBQiEfCndbDT9ioSJQ" name="handle" visibility="public" bodyCondition="_pqvc0BQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_pqvc0BQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_pqwD4BQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_pqygIBQiEfCndbDT9ioSJQ" name="handle" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pq4mwBQiEfCndbDT9ioSJQ" name="DecisionTree">
+    <ownedOperation xmi:id="_prHQQBQiEfCndbDT9ioSJQ" name="handle" visibility="public" bodyCondition="_prJFcBQiEfCndbDT9ioSJQ">
+      <ownedRule xmi:id="_prJFcBQiEfCndbDT9ioSJQ">
+        <specification xmi:type="uml:LiteralString" xmi:id="_prJFcRQiEfCndbDT9ioSJQ" name="TemplateBody" value="%DefaultBody%"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_prLhsBQiEfCndbDT9ioSJQ" name="handle" type="_pnTHQBQiEfCndbDT9ioSJQ" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+</uml:Model>

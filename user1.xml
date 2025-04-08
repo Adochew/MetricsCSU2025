@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_kkgsMBeLEd60N8ipLbB6nA" name="图2-用例图">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_usJZ0BQlEfCndbDT9ioSJQ" name="教师"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_us7c8BQlEfCndbDT9ioSJQ" name="考生"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_utCxsBQlEfCndbDT9ioSJQ" name="系统管理员"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ut4fMBQlEfCndbDT9ioSJQ" name="添加试题"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uuqiUBQlEfCndbDT9ioSJQ" name="批量导入试题"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uuyeIBQlEfCndbDT9ioSJQ" name="管理试卷"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uu5L0BQlEfCndbDT9ioSJQ" name="安排考试"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uvAgkBQlEfCndbDT9ioSJQ" name="管理试题"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uvH1UBQlEfCndbDT9ioSJQ" name="管理考试"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uvPKEBQlEfCndbDT9ioSJQ" name="添加试卷"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uvWe0BQlEfCndbDT9ioSJQ" name="查看数据分析报告"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uvfBsBQlEfCndbDT9ioSJQ" name="确认发布成绩">
+    <ownedComment xmi:id="_uvr2ABQlEfCndbDT9ioSJQ">
+      <body>&#xD;
+</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uvtEIBQlEfCndbDT9ioSJQ" name="其他管理"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uv1nABQlEfCndbDT9ioSJQ" name="在线考试"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uv8UsBQlEfCndbDT9ioSJQ" name="查询考试成绩"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uwDpcBQlEfCndbDT9ioSJQ" name="登录"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uwLlQBQlEfCndbDT9ioSJQ" name="添加信息"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uwSS8BQlEfCndbDT9ioSJQ" name="添加教师"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_uwZnsBQlEfCndbDT9ioSJQ" name="添加考生"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uwtwwBQlEfCndbDT9ioSJQ" name="Association_1" memberEnd="_uwuX0BQlEfCndbDT9ioSJQ _uzEhMBQlEfCndbDT9ioSJQ" navigableOwnedEnd="_uwuX0BQlEfCndbDT9ioSJQ _uzEhMBQlEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_uwuX0BQlEfCndbDT9ioSJQ" name="src" type="_usJZ0BQlEfCndbDT9ioSJQ" association="_uwtwwBQlEfCndbDT9ioSJQ"/>
+    <ownedEnd xmi:id="_uzEhMBQlEfCndbDT9ioSJQ" name="dst" type="_uvAgkBQlEfCndbDT9ioSJQ" association="_uwtwwBQlEfCndbDT9ioSJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uzGWYBQlEfCndbDT9ioSJQ" name="Association_2" memberEnd="_uzGWYRQlEfCndbDT9ioSJQ _uzKAwBQlEfCndbDT9ioSJQ" navigableOwnedEnd="_uzGWYRQlEfCndbDT9ioSJQ _uzKAwBQlEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_uzGWYRQlEfCndbDT9ioSJQ" name="src" type="_usJZ0BQlEfCndbDT9ioSJQ" association="_uzGWYBQlEfCndbDT9ioSJQ"/>
+    <ownedEnd xmi:id="_uzKAwBQlEfCndbDT9ioSJQ" name="dst" type="_uuyeIBQlEfCndbDT9ioSJQ" association="_uzGWYBQlEfCndbDT9ioSJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uzLO4BQlEfCndbDT9ioSJQ" name="Association_3" memberEnd="_uzL18BQlEfCndbDT9ioSJQ _uzQucBQlEfCndbDT9ioSJQ" navigableOwnedEnd="_uzL18BQlEfCndbDT9ioSJQ _uzQucBQlEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_uzL18BQlEfCndbDT9ioSJQ" name="src" type="_usJZ0BQlEfCndbDT9ioSJQ" association="_uzLO4BQlEfCndbDT9ioSJQ"/>
+    <ownedEnd xmi:id="_uzQucBQlEfCndbDT9ioSJQ" name="dst" type="_uvH1UBQlEfCndbDT9ioSJQ" association="_uzLO4BQlEfCndbDT9ioSJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uzSjoBQlEfCndbDT9ioSJQ" name="Association_4" memberEnd="_uzTKsBQlEfCndbDT9ioSJQ _uzYDMBQlEfCndbDT9ioSJQ" navigableOwnedEnd="_uzTKsBQlEfCndbDT9ioSJQ _uzYDMBQlEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_uzTKsBQlEfCndbDT9ioSJQ" name="src" type="_usJZ0BQlEfCndbDT9ioSJQ" association="_uzSjoBQlEfCndbDT9ioSJQ"/>
+    <ownedEnd xmi:id="_uzYDMBQlEfCndbDT9ioSJQ" name="dst" type="_uvWe0BQlEfCndbDT9ioSJQ" association="_uzSjoBQlEfCndbDT9ioSJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uzZ4YBQlEfCndbDT9ioSJQ" name="Association_5" memberEnd="_uzafcBQlEfCndbDT9ioSJQ _uzhNIBQlEfCndbDT9ioSJQ" navigableOwnedEnd="_uzafcBQlEfCndbDT9ioSJQ _uzhNIBQlEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_uzafcBQlEfCndbDT9ioSJQ" name="src" type="_usJZ0BQlEfCndbDT9ioSJQ" association="_uzZ4YBQlEfCndbDT9ioSJQ"/>
+    <ownedEnd xmi:id="_uzhNIBQlEfCndbDT9ioSJQ" name="dst" type="_uvfBsBQlEfCndbDT9ioSJQ" association="_uzZ4YBQlEfCndbDT9ioSJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uzibQBQlEfCndbDT9ioSJQ" name="Association_6" memberEnd="_uzjCUBQlEfCndbDT9ioSJQ _uzn60BQlEfCndbDT9ioSJQ" navigableOwnedEnd="_uzjCUBQlEfCndbDT9ioSJQ _uzn60BQlEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_uzjCUBQlEfCndbDT9ioSJQ" name="src" type="_us7c8BQlEfCndbDT9ioSJQ" association="_uzibQBQlEfCndbDT9ioSJQ"/>
+    <ownedEnd xmi:id="_uzn60BQlEfCndbDT9ioSJQ" name="dst" type="_uv1nABQlEfCndbDT9ioSJQ" association="_uzibQBQlEfCndbDT9ioSJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uzpI8BQlEfCndbDT9ioSJQ" name="Association_7" memberEnd="_uzpI8RQlEfCndbDT9ioSJQ _uzszUBQlEfCndbDT9ioSJQ" navigableOwnedEnd="_uzpI8RQlEfCndbDT9ioSJQ _uzszUBQlEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_uzpI8RQlEfCndbDT9ioSJQ" name="src" type="_us7c8BQlEfCndbDT9ioSJQ" association="_uzpI8BQlEfCndbDT9ioSJQ"/>
+    <ownedEnd xmi:id="_uzszUBQlEfCndbDT9ioSJQ" name="dst" type="_uv8UsBQlEfCndbDT9ioSJQ" association="_uzpI8BQlEfCndbDT9ioSJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uzvPkBQlEfCndbDT9ioSJQ" name="Association_8" memberEnd="_uzv2oBQlEfCndbDT9ioSJQ _uz1WMBQlEfCndbDT9ioSJQ" navigableOwnedEnd="_uzv2oBQlEfCndbDT9ioSJQ _uz1WMBQlEfCndbDT9ioSJQ">
+    <ownedEnd xmi:id="_uzv2oBQlEfCndbDT9ioSJQ" name="src" type="_utCxsBQlEfCndbDT9ioSJQ" association="_uzvPkBQlEfCndbDT9ioSJQ"/>
+    <ownedEnd xmi:id="_uz1WMBQlEfCndbDT9ioSJQ" name="dst" type="_uwLlQBQlEfCndbDT9ioSJQ" association="_uzvPkBQlEfCndbDT9ioSJQ"/>
+  </packagedElement>
+</uml:Model>

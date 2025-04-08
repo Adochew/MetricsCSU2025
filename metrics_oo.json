@@ -1,0 +1,163 @@
+[
+  {
+    "NAME": "DataClassifier",
+    "CK": {
+      "WMC": 5,
+      "DIT": 0,
+      "NOC": 0,
+      "CBO": 0,
+      "RFC": 5,
+      "LCOM": 5
+    },
+    "LK": {
+      "NOA": 0,
+      "NOM": 5,
+      "SIZE": 5
+    },
+    "MOOD": {
+      "MHF": 0.0,
+      "AHF": 0.0,
+      "MIF": 0.0,
+      "AIF": 0.0,
+      "CF": 0.0
+    }
+  },
+  {
+    "NAME": "NaiveBayesClassifier",
+    "CK": {
+      "WMC": 2,
+      "DIT": 0,
+      "NOC": 0,
+      "CBO": 1,
+      "RFC": 2,
+      "LCOM": 1
+    },
+    "LK": {
+      "NOA": 1,
+      "NOM": 2,
+      "SIZE": 3
+    },
+    "MOOD": {
+      "MHF": 0.0,
+      "AHF": 0.0,
+      "MIF": 0.0,
+      "AIF": 0.0,
+      "CF": 0.02
+    }
+  },
+  {
+    "NAME": "NaiveBayes",
+    "CK": {
+      "WMC": 1,
+      "DIT": 0,
+      "NOC": 0,
+      "CBO": 1,
+      "RFC": 1,
+      "LCOM": 1
+    },
+    "LK": {
+      "NOA": 0,
+      "NOM": 1,
+      "SIZE": 1
+    },
+    "MOOD": {
+      "MHF": 0.0,
+      "AHF": 0.0,
+      "MIF": 0.0,
+      "AIF": 0.0,
+      "CF": 0.02
+    }
+  },
+  {
+    "NAME": "KNNClassifier",
+    "CK": {
+      "WMC": 2,
+      "DIT": 0,
+      "NOC": 0,
+      "CBO": 1,
+      "RFC": 2,
+      "LCOM": 1
+    },
+    "LK": {
+      "NOA": 1,
+      "NOM": 2,
+      "SIZE": 3
+    },
+    "MOOD": {
+      "MHF": 0.0,
+      "AHF": 0.0,
+      "MIF": 0.0,
+      "AIF": 0.0,
+      "CF": 0.02
+    }
+  },
+  {
+    "NAME": "DecisionTreeClassifier",
+    "CK": {
+      "WMC": 2,
+      "DIT": 0,
+      "NOC": 0,
+      "CBO": 1,
+      "RFC": 2,
+      "LCOM": 1
+    },
+    "LK": {
+      "NOA": 1,
+      "NOM": 2,
+      "SIZE": 3
+    },
+    "MOOD": {
+      "MHF": 0.0,
+      "AHF": 0.0,
+      "MIF": 0.0,
+      "AIF": 0.0,
+      "CF": 0.02
+    }
+  },
+  {
+    "NAME": "Knn",
+    "CK": {
+      "WMC": 1,
+      "DIT": 0,
+      "NOC": 0,
+      "CBO": 1,
+      "RFC": 0,
+      "LCOM": 0
+    },
+    "LK": {
+      "NOA": 0,
+      "NOM": 1,
+      "SIZE": 1
+    },
+    "MOOD": {
+      "MHF": 0.0,
+      "AHF": 0.0,
+      "MIF": 0.0,
+      "AIF": 0.0,
+      "CF": 0.02
+    }
+  },
+  {
+    "NAME": "DecisionTree",
+    "CK": {
+      "WMC": 1,
+      "DIT": 0,
+      "NOC": 0,
+      "CBO": 1,
+      "RFC": 1,
+      "LCOM": 1
+    },
+    "LK": {
+      "NOA": 0,
+      "NOM": 1,
+      "SIZE": 1
+    },
+    "MOOD": {
+      "MHF": 0.0,
+      "AHF": 0.0,
+      "MIF": 0.0,
+      "AIF": 0.0,
+      "CF": 0.02
+    }
+  }
+]
